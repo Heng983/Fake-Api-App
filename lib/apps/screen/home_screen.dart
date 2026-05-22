@@ -1,12 +1,14 @@
 // import 'dart:convert';
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:demo_apps/apps/controller/grid_style_controller.dart';
 import 'package:demo_apps/apps/screen/detail_screen.dart';
 import 'package:demo_apps/apps/theme/color.dart';
 import 'package:demo_apps/apps/model/product_model.dart';
 import 'package:demo_apps/apps/service/product_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:provider/provider.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 class FirstScreen extends StatefulWidget {
@@ -46,6 +48,8 @@ class _FirstScreenState extends State<FirstScreen> {
 
   @override
   Widget build(BuildContext context) {
+    _gridstyle = context.watch<GridStyleController>().gridStyle;
+
     return Scaffold(
       appBar: _buildAppBar(),
       body: _buildBody(),
@@ -77,18 +81,6 @@ class _FirstScreenState extends State<FirstScreen> {
       ),
       backgroundColor: AppColors.primaryColor,
       foregroundColor: Colors.white,
-      actions: [
-        IconButton(
-          onPressed: () {
-            setState(() {
-              _gridstyle = !_gridstyle;
-            });
-          },
-          icon: Icon(
-            _gridstyle ? Icons.grid_view_rounded : Icons.view_agenda_rounded,
-          ),
-        ),
-      ],
     );
   }
 

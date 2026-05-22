@@ -1,6 +1,8 @@
+import 'package:demo_apps/apps/controller/theme_controlle.dart';
 import 'package:demo_apps/apps/screen/MainScreen.dart';
 // import 'package:demo_application/screen/first_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class AppLogic extends StatelessWidget {
   const AppLogic({super.key});
@@ -12,8 +14,11 @@ class AppLogic extends StatelessWidget {
     // Color secondary = Color(0xFFCFFFDC);
     // Color bgNavBarColor = Color(0xFF68BA7F);
 
+    final themeController = context.watch<ThemeController>();
+
     return MaterialApp(
-      themeMode: ThemeMode.system,
+      themeMode: themeController.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),
       home: const MainScreen(),

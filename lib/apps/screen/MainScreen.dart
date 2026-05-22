@@ -1,6 +1,7 @@
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:demo_apps/apps/screen/home_screen.dart';
+import 'package:demo_apps/apps/screen/setting_screen.dart';
 import 'package:demo_apps/apps/theme/color.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
@@ -22,25 +23,25 @@ class _MainScreenState extends State<MainScreen> {
       screens: [
         FirstScreen(),
         Container(color: Colors.amberAccent),
-        Container(color: Colors.blueGrey),
+        SettingScreen(),
       ],
       items: [
         PersistentBottomNavBarItem(
-          icon: Icon(Icons.home, color: Colors.black),
+          icon: Icon(Icons.home),
           title: "Home",
-          activeColorPrimary: Colors.blueGrey,
+          activeColorPrimary: AppColors.primaryColor,
           inactiveColorPrimary: const Color.fromARGB(88, 0, 0, 0),
         ),
         PersistentBottomNavBarItem(
           icon: Icon(Icons.search),
           title: "Search",
-          activeColorPrimary: Colors.black,
+          activeColorPrimary: AppColors.primaryColor,
           inactiveColorPrimary: const Color.fromARGB(88, 0, 0, 0),
         ),
         PersistentBottomNavBarItem(
           icon: Icon(Icons.settings),
           title: "Settings",
-          activeColorPrimary: Colors.black,
+          activeColorPrimary: AppColors.primaryColor,
           inactiveColorPrimary: const Color.fromARGB(88, 0, 0, 0),
         ),
       ],
