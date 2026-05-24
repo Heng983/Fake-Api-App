@@ -20,6 +20,7 @@ class SettingScreen extends StatelessWidget {
           CircleAvatar(backgroundImage: NetworkImage(images), radius: 140),
           Divider(thickness: 2, color: Colors.grey),
           Card(
+            color: Colors.white,
             child: ListTile(
               leading: Icon(Icons.settings_applications, size: 14),
               title: Text("Switched to ${_isDarkMode ? "Dark" : "Light"} Mode"),
@@ -34,6 +35,7 @@ class SettingScreen extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Card(
+            color: Colors.white,
             child: ListTile(
               leading: Icon(Icons.grid_view_outlined, size: 14),
               title: Text("Switched to ${_gridStyle ? "Grid" : "List"} View"),
