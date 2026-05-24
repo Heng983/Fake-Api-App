@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:demo_apps/apps/model/product_model.dart';
 import 'package:demo_apps/apps/theme/color.dart';
+import 'package:demo_apps/apps/utils/utils_url.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -30,6 +31,8 @@ class _DetailScreenState extends State<DetailScreen> {
   double _getResponsiveFontSize(BuildContext context, double baseSize) {
     return _isTablet(context) ? baseSize * 1.2 : baseSize;
   }
+
+  final _urlUtil = UtilsUrl();
 
   @override
   Widget build(BuildContext context) {
@@ -95,6 +98,16 @@ class _DetailScreenState extends State<DetailScreen> {
                 color: Colors.green.shade600,
               ),
             ),
+          ),
+        ),
+        SizedBox(width: 6),
+        Expanded(
+          child: FilledButton.icon(
+            onPressed: () {
+              _urlUtil.openUrl("tel:+85510558541");
+            },
+            icon: FaIcon(FontAwesomeIcons.phone),
+            label: Text("Contact here"),
           ),
         ),
         Card(

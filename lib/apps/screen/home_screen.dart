@@ -7,7 +7,6 @@ import 'package:demo_apps/apps/theme/color.dart';
 import 'package:demo_apps/apps/model/product_model.dart';
 import 'package:demo_apps/apps/service/product_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 

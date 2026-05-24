@@ -1,6 +1,5 @@
-import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
-import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:demo_apps/apps/screen/home_screen.dart';
+import 'package:demo_apps/apps/screen/search_screen.dart';
 import 'package:demo_apps/apps/screen/setting_screen.dart';
 import 'package:demo_apps/apps/theme/color.dart';
 import 'package:flutter/material.dart';
@@ -20,11 +19,7 @@ class _MainScreenState extends State<MainScreen> {
       context,
       navBarStyle: NavBarStyle.style13,
       padding: EdgeInsets.only(top: 8),
-      screens: [
-        FirstScreen(),
-        Container(color: Colors.amberAccent),
-        SettingScreen(),
-      ],
+      screens: [FirstScreen(), SearchScreen(), SettingScreen()],
       items: [
         PersistentBottomNavBarItem(
           icon: Icon(Icons.home),
