@@ -100,8 +100,7 @@ class _DetailScreenState extends State<DetailScreen> {
             ),
           ),
         ),
-        SizedBox(width: 6),
-        Expanded(
+        Card(
           child: FilledButton.icon(
             onPressed: () {
               _urlUtil.openUrl("tel:+85510558541");
