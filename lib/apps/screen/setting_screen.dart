@@ -35,7 +35,7 @@ class SettingScreen extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Card(
-            color: Colors.grey,
+            color: Colors.white,
             child: ListTile(
               leading: Icon(Icons.grid_view_outlined, size: 14),
               title: Text("Switched to ${_gridStyle ? "Grid" : "List"} View"),
